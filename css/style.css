@@ -9,11 +9,7 @@
     }
   }
   
-@media (prefers-reduced-motion: reduce) {
-    #logo{
-        animation: none;
-    }
-}
+
   body {
     font-family: 'Poppins', serif; 
     background-image: url('../images/concrete_seamless.png');
@@ -113,7 +109,7 @@
   
   @media print {
     body {
-      font-family: 'Arial', Helvetica, sans-serif;
+      font-family: 'Arial', Helvetica;
       background-image: none;
     }
     
@@ -125,28 +121,34 @@
   
     .nav_links {
       display: flex;
-      justify-content: center; /* center items horizontally */
+      align-items: flex-end;
       flex-direction: row;
-      
+      flex-wrap: nowrap;
     }
+    .nav_item a{
+      padding: 100px;
+    }
+
   
     .pricing {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: flex-end; 
       flex-direction: row; 
       flex-wrap: nowrap;
     }
     
     .card {
+  
+      border: 2px solid #45ADDD;
+      flex-basis: 325px;
       flex: 1 1 275px;
       margin: 12px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border: 2px solid #45ADDD;
-      flex-basis: 325px;
-      
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
     
     #gallery, .gallery {
@@ -154,4 +156,8 @@
     }
   }
   
-  
+  @media (prefers-reduced-motion: reduce) {
+    #logo{
+        animation: none;
+    }
+}
